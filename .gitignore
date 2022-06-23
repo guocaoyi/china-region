@@ -1,0 +1,23 @@
+#忽略上传的文件夹
+.idea
+**/node_modules/**
+**/logs/**
+**/dist/**
+**/db/**
+**/bin/**
+
+#忽略上传的文件
+**/package-lock.json
+**/*caxche.js
+**/**.js.map
+*/.sw*
+**/.DS_Store
+**/yarn.lock
+**/**custom.json
+**/npm-debug.log
+**/yarn-error.log
+
+#IDE
+**/*.iml
+
+# script
