@@ -1,0 +1,52 @@
+{
+  "name": "china-region-serve",
+  "projectName": "china_region",
+  "artifactId": "china-region",
+  "version": "0.4.1-RELEASE",
+  "description": "中国省市区地址服务",
+  "author": "gcy[of1518]",
+  "license": "MIT",
+  "scripts": {
+    "startup": "pm2 start ./dist/src/main.js --name china-address -i 1 -k 50000",
+    "restart": "pm2 restart ./dist/src/main.js china-address -k 50000",
+    "shutdown": "pm2 delete china-address -k 50000",
+    "format": "prettier --write '**/*.ts'",
+    "dev": "nodemon",
+    "cl": "rm -rf dist && rm -rf bin",
+    "prepublish": "npm run cl && tsc",
+    "postpublish": "ts-node ./script/bugatti.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.0.0",
+    "@nestjs/core": "^5.0.0",
+    "class-validator": "^0.9.1",
+    "dotenv": "^7.0.0",
+    "dubbo-invoker": "^1.0.2",
+    "dubbo2.js": "2.2.5",
+    "fastify-formbody": "^2.0.0",
+    "js-to-java": "2.4.0",
+    "nodejieba": "^2.2.6",
+    "pm2": "^3.5.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.4.0",
+    "sqlite3": "4.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/js-to-java": "^2.4.0",
+    "@types/node": "^8.9.0",
+    "@types/sqlite3": "^3.1.3",
+    "cz-conventional-changelog": "^2.1.0",
+    "nodemon": "^1.14.1",
+    "prettier": "^1.19.1",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "typescript": "^2.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
