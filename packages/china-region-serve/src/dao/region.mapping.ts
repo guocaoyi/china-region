@@ -3,7 +3,7 @@ import { db } from '../provider/db'
 
 /**
  * @description Region Mapping
- * @author gcy[of1518]
+ * @author yalda
  * @date 2019.03.12
  */
 export class RegionMapping {
