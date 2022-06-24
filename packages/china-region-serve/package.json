@@ -4,7 +4,7 @@
   "artifactId": "china-region",
   "version": "0.4.1-RELEASE",
   "description": "中国省市区地址服务",
-  "author": "gcy[of1518]",
+  "author": "yalda",
   "license": "MIT",
   "scripts": {
     "startup": "pm2 start ./dist/src/main.js --name china-address -i 1 -k 50000",

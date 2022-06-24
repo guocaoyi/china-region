@@ -1,9 +1,9 @@
-# 中国地址库服务
+# 中国行政分区地址库服务
 
 ## 目标
 
 - 为业务应用提供高可用的地址服务
-- 拓展了 Gavin 服务的能力，为 PC、小程序、APP、H5 应用提供了基于 Restful 风格的 API
+- 拓展服务的能力，为 PC、小程序、APP、H5 应用提供了基于 Restful 风格的 API
 - 支持多种结构的数据的查询
 
 ## 服务能力
@@ -15,32 +15,17 @@
 - 地址分词&解构成标准数据格式
   - 对整段的地址（省市区县街道乡镇详细地址）进行分词，返回标准的数据格式；
 
-## TODO
+## Features & TODOs
 
-- 除了 Restful 风格的 API, 服务能够兼容 GraphQL 风格的查询
-- 把 Dubbo 的数据迁移到 ES、该服务不再内置 DB
-- 拓展拼音、检拼、首字母
-
-## 项目目录
-
-```bash
-  |__script // 脚本：bugatti
-  |__src
-  |    |__controller // 控制层
-  |    |__db // 数据索引文件、数据缓存json文件
-  |    |  |__**.json // 数据缓存文件
-  |    |  |__region.sqlite // SQLite 数据库索引文档
-  |    |  |__region.utf8 // jieba 词频字典
-  |    |__filter // 拦截器
-  |    |__interface // 实体定义
-  |    |__provider // 服务提供者：dubbo\service\dto
-  |    |__utils // 工具类
-  |    |__main.ts // 项目入口
-  |    |__module.ts // app.module
-  |__CHANGELOG.md // change log
-  |__CONTRIBUTION.md // 项目代码提交规范
-  |__README.md // 项目说明文档
-```
+[ ] 地址查询（省市区）
+[ ] 地址查询（街道乡镇四级地址）
+[ ] 拓展字段（简拼、全拼）
+[ ] 地址解析（分词、结构化）
+[ ] 地址补齐，结构化
+[ ] 多 DB Engine（Redis\MongoDB\CouchDB\MySQL\SQLite）支撑
+[ ] Docker 支持
+[ ] OpenApi Swagger JSON
+[ ] Jest 支持
 
 ## 开发 & 运维
 
@@ -69,12 +54,12 @@ Npm: 6.0+
 ### 生产（测试、灰度）
 
 TODO
+
 - 计划放在 docker hub 中
 
 ### 编码风格
 
 本项目使用 Tslint + Prettier 对代码对静态校验和编码规范检查
-
 
 ### 部署
 
@@ -367,17 +352,17 @@ response:
 #### 分词字典
 
 ```txt
-北京 99999 province
-北京市 9999 city
-东城区 999 area
-西城区 999 area
-朝阳区 999 area
-丰台区 999 area
-石景山区 999 area
-海淀区 999 area
-门头沟区 999 area
-房山区 999 area
-东直门街道 998 street
+北京 999 province
+北京市 666 city
+东城区 333 area
+西城区 333 area
+朝阳区 333 area
+丰台区 333 area
+石景山区 333 area
+海淀区 333 area
+门头沟区 333 area
+房山区 333 area
+东直门街道 111 street
 ...
 ```
 
