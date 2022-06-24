@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common'
 
 /**
  * @description basic
- * @author gcy[of1518]
+ * @author yalda
  * @date 2018.07
  */
 @Controller()

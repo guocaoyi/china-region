@@ -7,7 +7,7 @@ import { RegionService } from '../service/region.service'
 
 /**
  * @description 分词处理控制器
- * @author gyc[of1518]
+ * @author yalda
  * @date 2019.03
  */
 @Controller('api')

@@ -5,7 +5,7 @@ import { IRegion } from '../entity/region'
 
 /**
  * @description 主要处理初始化的数据
- * @author gcy[of1518]
+ * @author yalda
  * @date 2018.7
  */
 @Injectable()

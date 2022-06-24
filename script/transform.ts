@@ -15,7 +15,7 @@ interface IRegionMap {
 
 /**
  * transform
- * @author gcy[of1518]
+ * @author yalda
  */
 export class Transform {
   private adapter:

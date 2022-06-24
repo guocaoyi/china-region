@@ -9,7 +9,7 @@ import { IRegion, IRegionColl } from '../entity/region'
 
 /**
  * @description 查询控制器
- * @author gcy[of1518]
+ * @author yalda
  * @date 2018.07
  */
 @Controller('api')
